@@ -26,7 +26,8 @@ $ sudo apt install qemu qemu-kvm libvirt-clients libvirt-daemon-system virtinst 
 
 ## How to clone
 To clone this project, run the following command:
-`git clone --recurse-submodules `
+`git clone --recurse-submodules https://github.com/elPrac/sandbox.git --depth=100`
+*Note: use --depth for a faster clone.
 
 ## How to start
 To get started, run `./scripts/start.sh`. The script will build a Docker image that has everything you need to work with Buildroot.
@@ -79,7 +80,7 @@ Within BR2 menuconfig search for the BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE and p
 BR2 offers to work with an internal and external toolchain, you can pick between versions or specify yours
 please visit the BR2 manual for more [info](https://buildroot.org/downloads/manual/manual.html#_cross_compilation_toolchain)
 
-#### Syz & C reproducers
+#### Syz & C reproducers:
 To enable the Syz & C reproducers, search for the BR2_PACKAGE_SYZBOT option in the menuconfig.
 After enabling it with (Y), you will see two new options: BR2_PACKAGE_SYZBOT_C_REPRO_ID and BR2_PACKAGE_SYZBOT_SYZ_REPRO_ID.
 You need to enter the ID of the reproducer, which can be found at the end of the Syzkaller bug URL.
@@ -93,7 +94,7 @@ If you need to access a specific kernel config option, you can run the menuconfi
 You can also customize your configurations. For example, if you prefer to use System-V init system instead of
 System-D (which is set by default), you can search for the appropriate option.
 
-### BR2 Build
+## BR2 Build
 To start building the BR2 configuration, run `make` under the buildroot directory.
 If you need to modify something later, you don't need to do a full build again; just run `make linux-rebuild all`.
 If you need a specific kernel config option, run the menuconfig by `make linux-menuconfig`.
