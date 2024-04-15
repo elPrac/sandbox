@@ -1,0 +1,9 @@
+[submodule "linux-mainline"]
+	path = linux-mainline
+	url = git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+[submodule "buildroot"]
+	path = buildroot
+	url = https://git.buildroot.net/buildroot
+[submodule "syzkaller"]
+	path = syzkaller
+	url = https://github.com/google/syzkaller.git

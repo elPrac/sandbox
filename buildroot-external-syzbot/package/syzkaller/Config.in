@@ -1,0 +1,5 @@
+config BR2_PACKAGE_SYZKALLER
+	bool "syzkaller"
+	depends on BR2_PACKAGE_HOST_GO_TARGET_ARCH_SUPPORTS
+	help
+	A pkg-recipe for syzkaller

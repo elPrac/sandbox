@@ -1,0 +1,2 @@
+source "$BR2_EXTERNAL_SYZBOT_PATH/package/syzbot/Config.in"
+source "$BR2_EXTERNAL_SYZBOT_PATH/package/syzkaller/Config.in"

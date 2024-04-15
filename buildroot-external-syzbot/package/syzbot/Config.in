@@ -1,0 +1,22 @@
+config BR2_PACKAGE_SYZBOT
+	bool "syzbot"
+	help
+	A pkg-recipe to build & install syzbot reproducers
+
+if BR2_PACKAGE_SYZBOT
+
+config BR2_PACKAGE_SYZBOT_C_REPRO_ID
+	string "Reproducer C Identifier"
+	help
+	From syzbot report C reproducer 
+	https://syzkaller.appspot.com/x/repro.c?x=<Identifier>
+
+config BR2_PACKAGE_SYZBOT_SYZ_REPRO_ID
+	string "Reproducer SYZ Identifier"
+	depends on BR2_PACKAGE_SYZKALLER
+	help
+	From syzbot report SYZ reproducer 
+	https://syzkaller.appspot.com/x/repro.syz?x=<Identifier>
+
+
+endif

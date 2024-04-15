@@ -1,0 +1,2 @@
+name: SYZBOT
+desc: External buildroot for Sysbot - syzkaller fuzzer
