@@ -7,3 +7,21 @@
 [submodule "syzkaller"]
 	path = syzkaller
 	url = https://github.com/google/syzkaller.git
+[submodule "sources/bitbake"]
+	path = sources/bitbake
+	url = https://github.com/openembedded/bitbake.git
+[submodule "sources/meta-openembedded"]
+	path = sources/meta-openembedded
+	url = git://git.openembedded.org/meta-openembedded
+[submodule "sources/openembedded-core"]
+	path = sources/openembedded-core
+	url = git://git.openembedded.org/openembedded-core
+[submodule "sources/meta-st-stm32mp"]
+	path = sources/meta-st-stm32mp
+	url = https://github.com/STMicroelectronics/meta-st-stm32mp.git
+[submodule "sources/meta-st-openstlinux"]
+	path = sources/meta-st-openstlinux
+	url = https://github.com/STMicroelectronics/meta-st-openstlinux.git
+[submodule "sources/meta-qt5"]
+	path = sources/meta-qt5
+	url = https://github.com/meta-qt5/meta-qt5.git
