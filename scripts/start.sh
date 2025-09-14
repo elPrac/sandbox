@@ -42,6 +42,7 @@ cmd="${cmd_args[*]:-$OE_BB_INIT_CMD}"
 docker_opts=(
     --rm
     --interactive
+    --network host
     --tty
     --env OEROOT=$OEROOT
     --env TEMPLATECONF=$TEMPLATECONF
