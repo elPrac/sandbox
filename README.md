@@ -42,10 +42,10 @@ If you want to work with another machine defconfig, run `make *_defconfig`. You 
 ## Workflow
 ### BR2 Config
 The first thing you need to do is configure your Buildroot environment. After running the `start.sh` script, you will
-be prompted to a console under the BR2 directory where you can start configuring your build by running `make menuconfig`
-once you have identified a bug that you want to reproduce.
+be prompted to a console under the BR2 directory where you can start configuring your build by running `make menuconfig`.
 
-For the bug, we picked the main artifacts that we are interested in, namely:
+Once you have identified a bug that you want to reproduce go and visit the discussion
+and pick the main artifacts that we are interested in, namely:
 ```
 HEAD commit:    40f71e7cd3c6 Merge tag 'net-6.4-rc7' of git://git.kernel.o..   
 git tree:       upstream
@@ -57,7 +57,8 @@ C reproducer:   https://syzkaller.appspot.com/x/repro.c?x=13fd185b280000
 
 #### Head commit & git tree:
 To use the specific commit you to want for the Linux kernel source code and the Linux tree/subsystem,
-add your custom remotes that you are interested in with `git remote add linux-next https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/`.
+add your custom remotes that you are interested in with `git remote add linux-next https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/` to the current `linux-mainline` that you already have cloned
+as submodule.
 You can then checkout to the specific commit you want to try. We make use of the BR2_OVERRIDE_SRCDIR
 mechanism so we can keep the Linux kernel source directory outside the Buildroot directory.
 
