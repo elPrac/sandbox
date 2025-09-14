@@ -1,0 +1,9 @@
+Port 22
+Protocol 2
+PermitRootLogin yes
+PasswordAuthentication yes
+PermitEmptyPasswords yes
+UsePAM no
+ChallengeResponseAuthentication no
+Subsystem sftp /usr/libexec/sftp-server
+
